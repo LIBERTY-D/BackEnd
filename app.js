@@ -41,7 +41,7 @@ user.pre("save", function (next) {
   next();
 });
 const UserModel = mongoose.model("porfolio", user);
-app.post("/emails", async (req, res, next) => {
+app.post("/", async (req, res, next) => {
   const { name, email, message } = req.body;
   if (!name || !email || !message) {
     return res.status(200).json({
